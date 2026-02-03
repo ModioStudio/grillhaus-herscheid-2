@@ -5,7 +5,7 @@ import { Star } from "lucide-react"
 export default function HeroSection() {
   return (
 <section id="start" className="relative min-h-screen flex items-center pt-16 bg-neutral-900/50">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black z-0" />
+        <div className="absolute inset-0 bg-linear-to-b from-black via-black/90 to-black z-0" />
         <div className="absolute inset-0 z-0">
           <img
             src="/greek-grilled-meat-gyros-on-dark-background-high-c.jpg"
@@ -16,7 +16,7 @@ export default function HeroSection() {
 
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-3xl">
-            {/* Rating Badge */}
+            
             <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/30 rounded-full px-4 py-2 mb-6">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -27,13 +27,13 @@ export default function HeroSection() {
               <span className="text-zinc-400 text-sm">· über 500 Bewertungen</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-balance">
-              Griechischer Imbiss in Herscheid
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">
+             Seit fast 40 Jahren Ihr griechischer Genuss in Herscheid
             </h1>
 
 
           <p className="text-xl text-zinc-300 mb-6">
-            Griechisches Grill-Restaurant · Familie Gabrelas · Seit fast 40 Jahren
+           Familie Gabrelas heißt Sie herzlich willkommen – genießen Sie frisch gegrillte Spezialitäten in gemütlicher Atmosphäre.
           </p>
 
             <div className="flex flex-wrap gap-4">

@@ -8,7 +8,7 @@ export default function Header() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           {/* Logo Placeholder */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
+            <div className="w-10 h-10 bg-linear-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
               <span className="text-white font-bold text-xl">G</span>
             </div>
             <div className="flex flex-col">
@@ -17,7 +17,6 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link href="#start" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
               Start
@@ -34,12 +33,17 @@ export default function Header() {
             <Link href="#standort" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
               Standort
             </Link>
+            <Link href="/foodtruck" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
+              Foodtruck
+            </Link>
           </nav>
 
           {/* CTA Button */}
-          <Button className="hidden md:flex bg-red-600 hover:bg-red-700 text-white">
-            <Phone className="w-4 h-4 mr-2" />
-            Jetzt anrufen
+          <Button asChild className="hidden md:flex bg-red-600 hover:bg-red-700 text-white">
+            <Link href="tel:023579289984">
+              <Phone className="w-4 h-4 mr-2" />
+              Jetzt anrufen
+            </Link>
           </Button>
         </div>
       </header>

@@ -9,11 +9,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Grillhaus Herscheid - Griechischer Imbiss mit 4,8★ Bewertung",
+  title: "Grillhaus Herscheid - Griechisches Grill-Restaurant mit 4,8★ Bewertung",
   description:
-    "Griechischer Imbiss in Herscheid. Gyros, Grill & Klassiker – frisch, schnell, ehrlich. Seit Jahren bewertet mit 4,8 Sternen von über 500 Kunden.",
-  generator: "v0.app",
-  keywords: ["Griechischer Imbiss Herscheid", "Gyros Herscheid", "Grillhaus", "Griechisches Restaurant"],
+    "Griechischer Grillhaus in Herscheid. Gyros, Grill & Klassiker – frisch, schnell, ehrlich. Seit Jahren bewertet mit 4,8 Sternen von über 500 Kunden.",
+  keywords: ["Griechischer Grillhaus Herscheid", "Gyros Herscheid", "Grillhaus", "Griechisches Restaurant"],
   icons: {
     icon: [
       {

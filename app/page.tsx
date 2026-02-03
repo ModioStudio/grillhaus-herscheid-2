@@ -7,6 +7,7 @@ import ReviewsSection from "@/components/sections/ReviewsSection"
 import SpecialtiesSection from "@/components/sections/SpecialtiesSection"
 import AboutSection from "@/components/sections/AboutSection"
 import LocationSection from "@/components/sections/LocationSection"
+import RestaurantGuruSection from "@/components/sections/RestaurantGuru"
 
 export default function HomePage() {
   return (
@@ -14,8 +15,9 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        <ReviewsSection />
         <SpecialtiesSection />
+        <ReviewsSection />
+        <RestaurantGuruSection />
         <AboutSection />
         <LocationSection />
       </main>

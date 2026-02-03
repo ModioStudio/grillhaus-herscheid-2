@@ -62,28 +62,39 @@ export default function LocationSection() {
                   <Phone className="w-5 h-5 text-red-600 mt-1" />
                   <div>
                     <div className="text-white font-semibold mb-1">Telefon</div>
-                    <div className="text-zinc-400">02357 / 9289984</div>
+                    <a href="tel:023579289984" className="text-zinc-400 hover:text-white transition-colors underline">02357 / 9289984</a>
                   </div>
                 </div>
               </div>
 
               <div className="flex gap-3 mt-8">
-                <Button className="flex-1 bg-red-600 hover:bg-red-700 text-white">
+                <Button className="flex-1 bg-red-600 hover:bg-red-700 text-white cursor-pointer">
                   <Phone className="w-4 h-4 mr-2" />
                   Anrufen
                 </Button>
-                <Button className="flex-1 bg-transparent" variant="outline">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Route planen
+                <Button
+                asChild
+                className="flex-1 bg-transparent border border-zinc-700 text-white hover:bg-zinc-800 cursor-pointer"
+                variant="outline"
+                >
+                <a
+                    href="https://www.google.com/maps?client=firefox-b-d&um=1&ie=UTF-8&fb=1&gl=de&sa=X&geocode=KY807xXVTblHMew11b5QCtqm&daddr=Wiesenstra%C3%9Fe+1,+58849+Herscheid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center  w-full h-full"
+                >
+                    <MapPin className="w-4 h-4 mr-2" />
+                 Route planen
+                </a>
                 </Button>
               </div>
             </Card>
 
             <div className="aspect-square md:aspect-auto rounded-lg overflow-hidden bg-zinc-900">
               <img
-                src="/map-location-pin-street-view.jpg"
+                src={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+ff0000(7.753286124495013,51.17273700460451)/7.753286124495013,51.17273700460451,15/1200x600?access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`}
                 alt="Standort Karte"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover filter grayscale contrast-100"
               />
             </div>
           </div>

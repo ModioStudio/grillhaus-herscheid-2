@@ -180,11 +180,10 @@ export default function MenuPage() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Header */}
       <header className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-sm border-b border-zinc-800">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
+            <div className="w-10 h-10 bg-linear-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
               <span className="text-white font-bold text-xl">G</span>
             </div>
             <div className="flex flex-col">
@@ -202,9 +201,9 @@ export default function MenuPage() {
         </div>
       </header>
 
-      {/* Hero */}
+
       <section className="pt-32 pb-16 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-4xl md:text-center sm:text-left">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">Unsere Speisekarte</h1>
           <p className="text-xl text-zinc-400 text-pretty">
             Entdecken Sie unsere vielfältige Auswahl an griechischen Spezialitäten und internationalen Klassikern
@@ -212,7 +211,6 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* Menu Categories */}
       <section className="pb-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-16">
@@ -243,7 +241,6 @@ export default function MenuPage() {
             ))}
           </div>
 
-          {/* CTA Section */}
           <div className="mt-16 text-center">
             <Card className="bg-zinc-900 border-red-600/30 p-8 md:p-12">
               <h3 className="text-3xl font-bold text-white mb-4">Jetzt bestellen oder vorbeikommen</h3>
@@ -251,8 +248,8 @@ export default function MenuPage() {
                 Rufen Sie uns an oder besuchen Sie uns direkt in Herscheid. Wir freuen uns auf Sie!
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-                  Jetzt anrufen: 02357 / 9289984
+                <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white">
+                  <Link href="tel:023579289984">Jetzt anrufen: 02357 / 9289984</Link>
                 </Button>
                 <Link href="/#standort">
                   <Button
@@ -269,7 +266,6 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-zinc-950 border-t border-zinc-800 py-8">
         <div className="container mx-auto px-4 text-center text-zinc-400 text-sm">
           <p>© 2025 Grillhaus Herscheid. Alle Rechte vorbehalten.</p>

@@ -7,18 +7,20 @@ const openingHours = [
   { days: "Fr–So", from: "12:00", to: "21:00" },
 ]
 
+const getYear = () => {
+  return new Date().getFullYear()
+}
+
 export default function Footer() {
   return (
     <footer className="bg-zinc-950 border-t border-zinc-800 py-12">
       <div className="container mx-auto px-4">
-        
-        {/* Top */}
+
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          
-          {/* Logo + Text + Social */}
+
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
+              <div className="w-10 h-10 bg-linear-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
                 <span className="text-white font-bold text-xl">G</span>
               </div>
               <div className="flex flex-col">
@@ -34,7 +36,7 @@ export default function Footer() {
 
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/grillhaus_herscheid/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -44,7 +46,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/grillhausherscheid/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -77,7 +79,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Kontakt */}
           <div>
             <h4 className="text-white font-semibold mb-4">Kontakt</h4>
             <div className="space-y-2 text-sm text-zinc-400">
@@ -87,7 +88,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Öffnungszeiten */}
           <section aria-labelledby="opening-hours">
             <h4 id="opening-hours" className="text-white font-semibold mb-4">
               Öffnungszeiten
@@ -116,9 +116,8 @@ export default function Footer() {
           </section>
         </div>
 
-        {/* Bottom */}
         <div className="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-400">
-          <div>© 2025 Grillhaus Herscheid. Alle Rechte vorbehalten.</div>
+          <div>© {getYear()} Grillhaus Herscheid. Alle Rechte vorbehalten.</div>
           <div className="flex gap-6">
             <Link href="/impressum" className="hover:text-white transition-colors">
               Impressum
