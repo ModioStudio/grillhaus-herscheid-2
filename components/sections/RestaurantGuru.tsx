@@ -1,24 +1,42 @@
-import { Star } from "lucide-react"
+import { Star } from "lucide-react";
 
 export default function RestaurantGuruSection() {
   return (
     <section className="py-16 bg-neutral-900/50 border-y border-zinc-800">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-          
           <div className="flex flex-col items-center">
             <div className="bg-zinc-500/0 rounded-lg p-8 mb-4 shadow-md transform hover:scale-105 transition-transform duration-300">
               <div className="flex flex-col items-center">
+                <img
+                  src={"/restaurantguru.png"}
+                  alt="Restaurant Guru Logo"
+                  className="w-24 h-auto mb-3"
+                />
 
-                <img src={"/restaurantguru.png"} alt="Restaurant Guru Logo" className="w-24 h-auto mb-3" />
-
-                <div className="text-2xl font-bold text-red-600 mb-1">Restaurant Guru</div>
+                <div className="text-2xl font-bold text-red-600 mb-1">
+                  Restaurant Guru
+                </div>
                 <div className="flex items-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-red-600 text-red-600" />
+                    <Star
+                      key={i}
+                      className="w-6 h-6 fill-red-600 text-red-600"
+                    />
                   ))}
                 </div>
-                <div className="text-lg font-semibold text-zinc-400">Empfohlen 2022</div>
+                <div className="flex flex-wrap justify-center gap-2 mt-2">
+                  {["Empfohlen 2022", "Empfohlen 2023", "Empfohlen 2024"].map(
+                    (year) => (
+                      <span
+                        key={year}
+                        className="text-sm font-semibold text-zinc-300 border border-zinc-600 rounded-full px-3 py-1"
+                      >
+                        {year}
+                      </span>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
             <a
@@ -38,12 +56,14 @@ export default function RestaurantGuruSection() {
               Ausgezeichnet auf Restaurant Guru
             </h3>
             <p className="text-zinc-400 leading-relaxed">
-              Wir sind stolz darauf, von Restaurant Guru als empfohlenes Restaurant ausgezeichnet zu werden. 
-              Diese Anerkennung basiert auf authentischen Kundenbewertungen und bestätigt unseren Anspruch an Qualität.
+              Wir sind stolz darauf, von Restaurant Guru als empfohlenes
+              Restaurant ausgezeichnet zu werden. Diese Anerkennung basiert auf
+              authentischen Kundenbewertungen und bestätigt unseren Anspruch an
+              Qualität.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

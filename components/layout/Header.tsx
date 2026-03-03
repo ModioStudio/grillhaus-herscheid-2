@@ -1,20 +1,20 @@
-"use client"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Phone, Menu, X } from "lucide-react"
-import Link from "next/link"
+"use client";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Phone, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { href: "#start", label: "Start" },
-    { href: "#speisekarte", label: "Speisekarte" },
+    { href: "/Speisekarte_Grillhaus_Herscheid.pdf", label: "Speisekarte" },
     { href: "#bewertungen", label: "Bewertungen" },
     { href: "#ueber-uns", label: "Über uns" },
     { href: "#standort", label: "Standort" },
     { href: "/foodtruck", label: "Foodtruck" },
-  ]
+  ];
 
   return (
     <header className="fixed top-0 w-full z-50 bg-zinc-900/60 backdrop-blur-sm border-b border-zinc-700">
@@ -29,7 +29,11 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-zinc-300 hover:text-white transition-colors text-sm font-medium"
+              className={`transition-colors text-sm font-medium ${
+                link.href === "/foodtruck"
+                  ? "text-red-500"
+                  : "text-zinc-300 hover:text-white"
+              }`}
             >
               {link.label}
             </Link>
@@ -37,7 +41,10 @@ export default function Header() {
         </nav>
 
         {/* Desktop Call Button */}
-        <Button asChild className="hidden md:flex bg-red-600 hover:bg-red-700 text-white">
+        <Button
+          asChild
+          className="hidden md:flex bg-red-600 hover:bg-red-700 text-white"
+        >
           <Link href="tel:023579289984">
             <Phone className="w-4 h-4 mr-2" />
             Jetzt anrufen
@@ -46,7 +53,10 @@ export default function Header() {
 
         {/* Mobile Burger */}
         <div className="md:hidden flex items-center">
-          <Button onClick={() => setIsOpen(!isOpen)} className="bg-red-600 hover:bg-red-700 text-white">
+          <Button
+            onClick={() => setIsOpen(!isOpen)}
+            className="bg-red-600 hover:bg-red-700 text-white"
+          >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
         </div>
@@ -61,7 +71,11 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-zinc-300 hover:text-white transition-colors text-base font-medium"
+                className={`transition-colors text-base font-medium ${
+                  link.href === "/foodtruck"
+                    ? "text-red-600"
+                    : "text-zinc-300 hover:text-white"
+                }`}
               >
                 {link.label}
               </Link>
@@ -76,5 +90,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { ArrowLeft, Phone, MapPin, Clock, Calendar, Truck } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, Phone, MapPin, Clock, Calendar, Truck } from "lucide-react";
+import Link from "next/link";
 
 export default function FoodtruckPage() {
   const upcomingEvents = [
@@ -29,11 +29,10 @@ export default function FoodtruckPage() {
       address: "Sportplatzweg, Herscheid",
       time: "12:00 - 18:00 Uhr",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-zinc-900/30">
-
       <header className="fixed top-0 w-full z-50 bg-zinc-900/60 backdrop-blur-sm border-b border-zinc-700">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
@@ -41,7 +40,11 @@ export default function FoodtruckPage() {
           </Link>
 
           <Link href="/">
-            <Button variant="outline" size="sm" className="border-zinc-700 bg-transparent hover:cursor-pointer">
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-zinc-700 bg-transparent hover:cursor-pointer"
+            >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück
             </Button>
@@ -59,27 +62,30 @@ export default function FoodtruckPage() {
           />
         </div>
 
-        <div className="container mx-auto px-4 z-10 relative py-20 bg-zinc-900/30 rounded-lg">
+        <div className="container mx-auto px-4 z-10 relative pt-14 pb-12 md:pt-20 md:pb-16 bg-zinc-900/30 rounded-lg">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-600/30 rounded-full px-4 py-2 mb-6">
               <Truck className="w-4 h-4 text-red-600" />
               <span className="text-white font-semibold">Mobil unterwegs</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-balance">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 text-balance">
               Unser Foodtruck kommt zu Ihnen
             </h1>
 
-            <p className="text-xl md:text-2xl text-zinc-300 mb-8 text-pretty leading-relaxed">
-              Griechische Grillspezialitäten auf Events, Märkten und privaten Veranstaltungen. Frisch zubereitet,
-              überall genießbar.
+            <p className="text-md md:text-xl text-zinc-300 mb-3 text-pretty leading-relaxed">
+              Griechischer Genuss auf Rädern, frisch zubereitet und direkt zu
+              Ihrem Event gebracht. egal ob Firmenfeier, Geburtstag oder
+              Stadtfest, wir sorgen für das kulinarische Highlight vor Ort.
             </p>
 
-             <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
-                <a href="tel:02357123456">
-                Kontaktieren Sie uns
-                </a>
-              </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-red-600 hover:bg-red-700 text-white text-lg px-8"
+            >
+              <a href="tel:02357123456">Kontaktieren Sie uns</a>
+            </Button>
           </div>
         </div>
       </section>
@@ -88,20 +94,29 @@ export default function FoodtruckPage() {
       <section className="py-20 bg-zinc-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">Wo Sie uns finden</h2>
-            <p className="text-xl text-zinc-300 text-pretty">Kommende Termine unseres Foodtrucks</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
+              Wo Sie uns finden
+            </h2>
+            <p className="text-xl text-zinc-300 text-pretty">
+              Kommende Termine unseres Foodtrucks
+            </p>
           </div>
 
           <div className="max-w-4xl mx-auto grid gap-6">
             {upcomingEvents.map((event, i) => (
-              <Card key={i} className="bg-zinc-800 border-zinc-700 p-6 hover:border-red-600/50 transition-colors">
+              <Card
+                key={i}
+                className="bg-zinc-800 border-zinc-700 p-6 hover:border-red-600/50 transition-colors"
+              >
                 <div className="grid md:grid-cols-[1fr,auto] gap-4">
                   <div>
                     <div className="flex items-center gap-2 text-red-600 font-semibold mb-2">
                       <Calendar className="w-4 h-4" />
                       <span>{event.date}</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">{event.location}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      {event.location}
+                    </h3>
                     <div className="flex flex-col gap-2 text-zinc-300">
                       <div className="flex items-start gap-2">
                         <MapPin className="w-4 h-4 mt-1 shrink-0" />
@@ -133,8 +148,12 @@ export default function FoodtruckPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">Was wir bieten</h2>
-              <p className="text-xl text-zinc-300 text-pretty">Perfekt für jede Veranstaltung</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
+                Was wir bieten
+              </h2>
+              <p className="text-xl text-zinc-300 text-pretty">
+                Perfekt für jede Veranstaltung
+              </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -142,9 +161,12 @@ export default function FoodtruckPage() {
                 <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Truck className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Vollausgestattet</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Vollausgestattet
+                </h3>
                 <p className="text-zinc-300 leading-relaxed">
-                  Professionelle Küche on Wheels mit allem Equipment für frische Zubereitung vor Ort
+                  Professionelle Küche on Wheels mit allem Equipment für frische
+                  Zubereitung vor Ort
                 </p>
               </Card>
 
@@ -152,9 +174,12 @@ export default function FoodtruckPage() {
                 <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Calendar className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Flexibel buchbar</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Flexibel buchbar
+                </h3>
                 <p className="text-zinc-300 leading-relaxed">
-                  Für Firmenfeiern, Geburtstage, Hochzeiten, Sportevents und alle privaten Anlässe
+                  Für Firmenfeiern, Geburtstage, Hochzeiten, Sportevents und
+                  alle privaten Anlässe
                 </p>
               </Card>
 
@@ -162,9 +187,12 @@ export default function FoodtruckPage() {
                 <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Phone className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Einfache Buchung</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Einfache Buchung
+                </h3>
                 <p className="text-zinc-300 leading-relaxed">
-                  Kontaktieren Sie uns für ein individuelles Angebot – wir beraten Sie gerne
+                  Kontaktieren Sie uns für ein individuelles Angebot – wir
+                  beraten Sie gerne
                 </p>
               </Card>
             </div>
@@ -179,39 +207,51 @@ export default function FoodtruckPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
                 Unsere Foodtruck-Klassiker
               </h2>
-              <p className="text-xl text-zinc-300 text-pretty">Die beliebtesten Gerichte für unterwegs</p>
+              <p className="text-xl text-zinc-300 text-pretty">
+                Die beliebtesten Gerichte für unterwegs
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
                   name: "Gyros Pita XXL",
-                  description: "Extra großes Fladenbrot mit saftigem Gyros, Tzatziki, Tomaten, Zwiebeln und Pommes",
+                  description:
+                    "Extra großes Fladenbrot mit saftigem Gyros, Tzatziki, Tomaten, Zwiebeln und Pommes",
                   price: "8,50 €",
+                  image: "/gyros.jpeg",
                 },
                 {
                   name: "Souvlaki Box",
-                  description: "Zwei Fleischspieße mit Tzatziki, Reis, Salat und Fladenbrot in der Box",
+                  description:
+                    "Zwei Fleischspieße mit Tzatziki, Reis, Salat und Fladenbrot in der Box",
                   price: "10,90 €",
-                },
-                {
-                  name: "Bifteki-Burger",
-                  description: "Gefülltes Hacksteak mit Feta im Burger-Bun, dazu Pommes",
-                  price: "9,50 €",
-                },
-                {
-                  name: "Grill-Mix-Teller",
-                  description: "Gemischte Grillplatte mit Gyros, Suzuki und Souvlaki",
-                  price: "13,90 €",
+                  image: "/greekfood.jpeg",
                 },
               ].map((dish, i) => (
-                <Card key={i} className="bg-zinc-800 border-zinc-700 p-6 hover:border-red-600/50 transition-colors">
-                  <div className="flex justify-between items-start gap-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{dish.name}</h3>
-                      <p className="text-zinc-300 text-sm leading-relaxed">{dish.description}</p>
+                <Card
+                  key={i}
+                  className="bg-zinc-800 border-zinc-700 overflow-hidden hover:border-red-600/50 transition-colors"
+                >
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={dish.image}
+                      alt={dish.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 flex justify-between items-start gap-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {dish.name}
+                      </h3>
+                      <p className="text-zinc-300 text-sm leading-relaxed">
+                        {dish.description}
+                      </p>
                     </div>
-                    <div className="text-2xl font-bold text-red-600 whitespace-nowrap">{dish.price}</div>
+                    <div className="text-2xl font-bold text-red-600 whitespace-nowrap">
+                      {dish.price}
+                    </div>
                   </div>
                 </Card>
               ))}
@@ -228,15 +268,15 @@ export default function FoodtruckPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-balance">
               Buchen Sie unseren Foodtruck
             </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto text-pretty leading-relaxed">
-              Planen Sie eine Veranstaltung? Wir bringen griechische Grillspezialitäten direkt zu Ihnen. Kontaktieren
-              Sie uns für ein individuelles Angebot.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
+            <div className="flex flex-wrap justify-center gap-4 mt-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-red-600 hover:bg-red-700 text-white text-lg px-8"
+              >
                 <Link href="tel:02357123456" className="flex items-center">
-                   <Phone className="w-5 h-5 mr-2" />
-                   Kontaktieren Sie uns
+                  <Phone className="w-5 h-5 mr-2" />
+                  Kontaktieren Sie uns
                 </Link>
               </Button>
               <Link href="/#standort">
@@ -259,5 +299,5 @@ export default function FoodtruckPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

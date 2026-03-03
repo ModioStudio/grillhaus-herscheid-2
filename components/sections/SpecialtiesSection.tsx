@@ -39,15 +39,8 @@ export default function SpecialtiesSection() {
             ].map((dish, i) => (
               <Card
                 key={i}
-                className="bg-zinc-900 border-zinc-800 overflow-hidden group hover:border-red-600/50 transition-colors"
+                className="bg-zinc-900 border-zinc-800 group hover:border-red-600/50 transition-colors"
               >
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={`/.jpg?height=400&width=400&query=${dish.image}`}
-                    alt={dish.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{dish.name}</h3>
                   <p className="text-zinc-400 text-sm mb-4 leading-relaxed">{dish.description}</p>
@@ -66,7 +59,7 @@ export default function SpecialtiesSection() {
                 variant="outline"
                 className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white bg-transparent"
               >
-                <a href="/speisekarte">
+                <a href="/Speisekarte_Grillhaus_Herscheid.pdf">
                 Zur kompletten Speisekarte
                 </a>
               </Button>

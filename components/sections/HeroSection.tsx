@@ -38,7 +38,7 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
-                <a href="/#speisekarte">
+                <a href="/Speisekarte_Grillhaus_Herscheid.pdf">
                 Speisekarte ansehen
                 </a>
               </Button>

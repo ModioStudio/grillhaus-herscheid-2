@@ -5,19 +5,19 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Familiengeführt seit über 30 Jahren
+              Tradition und Qualität aus Herscheid
             </h2>
 
-            <p className="text-lg text-zinc-300 mb-6 leading-relaxed">
-              Unser Grillhaus ist mehr als ein Restaurant – es ist ein Familienbetrieb mit Geschichte.
-              Seit über drei Jahrzehnten stehen wir in Herscheid für ehrliche griechische Küche,
-              traditionelle Rezepte und echtes Handwerk.
+            <p className="text-lg text-zinc-300 mb-2 leading-relaxed">
+              Unser Grillhaus ist mehr als ein Restaurant, es ist ein
+              Familienbetrieb mit Geschichte. Seit über drei Jahrzehnten stehen
+              wir in Herscheid für ehrliche griechische Küche.
             </p>
 
             <p className="text-lg text-zinc-300 mb-6 leading-relaxed">
-              Was einst als kleiner Familienbetrieb begann, wird bis heute mit derselben Leidenschaft geführt:
-              frische Zutaten, sorgfältige Zubereitung und der Anspruch, dass jedes Gericht unseren eigenen
-              Namen tragen könnte.
+              Was als kleiner Familienbetrieb begann, führen wir bis heute mit
+              derselben Leidenschaft, mit frischen Zutaten und sorgfältiger
+              Zubereitung.
             </p>
 
             <div className="flex flex-wrap gap-8">
@@ -46,5 +46,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

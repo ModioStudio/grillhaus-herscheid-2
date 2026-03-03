@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Phone, MapPin, Clock } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Phone, MapPin, Clock } from "lucide-react";
 
 export default function MobileStickyBar() {
   return (
@@ -15,10 +15,10 @@ export default function MobileStickyBar() {
         </a>
       </Button>
       <Button asChild className="bg-red-600">
-        <a href="/speisekarte">
+        <a href="/Speisekarte_Grillhaus_Herscheid.pdf">
           <Clock className="w-4 h-4 mr-1" /> Karte
         </a>
       </Button>
     </div>
-  )
+  );
 }
