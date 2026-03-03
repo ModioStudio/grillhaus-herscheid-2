@@ -8,7 +8,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-linear-to-b from-black via-black/90 to-black z-0" />
         <div className="absolute inset-0 z-0">
           <img
-            src="/greek-grilled-meat-gyros-on-dark-background-high-c.jpg"
+            src="/hero-background.jpeg"
             alt="Griechische Grillspezialitäten"
             className="w-full h-full object-cover opacity-40"
           />

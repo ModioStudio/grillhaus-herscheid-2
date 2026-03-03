@@ -33,21 +33,15 @@ export default function FoodtruckPage() {
 
   return (
     <div className="min-h-screen bg-zinc-900/30">
-      {/* Header */}
+
       <header className="fixed top-0 w-full z-50 bg-zinc-900/60 backdrop-blur-sm border-b border-zinc-700">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-linear-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
-              <span className="text-white font-bold text-xl">G</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-lg leading-none">GRILLHAUS</span>
-              <span className="text-red-600 text-xs tracking-wider">HERSCHEID</span>
-            </div>
+            <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
           </Link>
 
           <Link href="/">
-            <Button variant="outline" size="sm" className="border-zinc-700 bg-transparent">
+            <Button variant="outline" size="sm" className="border-zinc-700 bg-transparent hover:cursor-pointer">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück
             </Button>
@@ -55,14 +49,13 @@ export default function FoodtruckPage() {
         </div>
       </header>
 
-      {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-16 bg-zinc-900/30 w-full">
         <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/70 z-0" />
         <div className="absolute inset-0 z-0">
           <img
-            src="/restaurantguru.png"
+            src="/Foodtruck.jpeg"
             alt="Unser Foodtruck"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-60"
           />
         </div>
 
@@ -82,10 +75,11 @@ export default function FoodtruckPage() {
               überall genießbar.
             </p>
 
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
-              <Phone className="w-5 h-5 mr-2" />
-              Jetzt anfragen
-            </Button>
+             <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
+                <a href="tel:02357123456">
+                Kontaktieren Sie uns
+                </a>
+              </Button>
           </div>
         </div>
       </section>
@@ -135,7 +129,6 @@ export default function FoodtruckPage() {
         </div>
       </section>
 
-      {/* Features */}
       <section className="py-20 bg-zinc-900/50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -179,7 +172,6 @@ export default function FoodtruckPage() {
         </div>
       </section>
 
-      {/* Menu Highlights */}
       <section className="py-20 bg-zinc-900/50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -241,15 +233,17 @@ export default function FoodtruckPage() {
               Sie uns für ein individuelles Angebot.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
-                <Phone className="w-5 h-5 mr-2" />
-                02357 / 123456
+              <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
+                <Link href="tel:02357123456" className="flex items-center">
+                   <Phone className="w-5 h-5 mr-2" />
+                   Kontaktieren Sie uns
+                </Link>
               </Button>
               <Link href="/#standort">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white bg-transparent text-lg px-8"
+                  className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white bg-transparent text-lg px-8 hover:cursor-pointer"
                 >
                   Restaurant besuchen
                 </Button>
@@ -259,7 +253,6 @@ export default function FoodtruckPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-zinc-900/50 border-t border-zinc-700 py-8">
         <div className="container mx-auto px-4 text-center text-zinc-300 text-sm">
           <p>© 2025 Grillhaus Herscheid. Alle Rechte vorbehalten.</p>

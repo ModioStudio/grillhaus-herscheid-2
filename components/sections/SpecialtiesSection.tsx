@@ -20,7 +20,7 @@ export default function SpecialtiesSection() {
               },
               {
                 name: "Grillteller",
-                description: "Gemischte Grillplatte mit Suzuki, Schweinesteak und Gyros, dazu Reis und Salat",
+                description: "Gemischte Grillplatte mit Schweinesteak und Gyros, dazu Reis und Salat",
                 price: "14,90 €",
                 image: "mixed+greek+grill+plate+meat+dark+background",
               },

@@ -1,51 +1,80 @@
+"use client"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Phone } from "lucide-react"
+import { Phone, Menu, X } from "lucide-react"
 import Link from "next/link"
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const navLinks = [
+    { href: "#start", label: "Start" },
+    { href: "#speisekarte", label: "Speisekarte" },
+    { href: "#bewertungen", label: "Bewertungen" },
+    { href: "#ueber-uns", label: "Über uns" },
+    { href: "#standort", label: "Standort" },
+    { href: "/foodtruck", label: "Foodtruck" },
+  ]
+
   return (
-      <header className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-sm border-b border-zinc-800">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          {/* Logo Placeholder */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-linear-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
-              <span className="text-white font-bold text-xl">G</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-lg leading-none">GRILLHAUS</span>
-              <span className="text-red-600 text-xs tracking-wider">HERSCHEID</span>
-            </div>
-          </div>
+    <header className="fixed top-0 w-full z-50 bg-zinc-900/60 backdrop-blur-sm border-b border-zinc-700">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="flex items-center">
+          <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+        </div>
 
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="#start" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
-              Start
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-zinc-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              {link.label}
             </Link>
-            <Link href="#speisekarte" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
-              Speisekarte
-            </Link>
-            <Link href="#bewertungen" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
-              Bewertungen
-            </Link>
-            <Link href="#ueber-uns" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
-              Über uns
-            </Link>
-            <Link href="#standort" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
-              Standort
-            </Link>
-            <Link href="/foodtruck" className="text-zinc-300 hover:text-white transition-colors text-sm font-medium">
-              Foodtruck
-            </Link>
-          </nav>
+          ))}
+        </nav>
 
-          {/* CTA Button */}
-          <Button asChild className="hidden md:flex bg-red-600 hover:bg-red-700 text-white">
-            <Link href="tel:023579289984">
-              <Phone className="w-4 h-4 mr-2" />
-              Jetzt anrufen
-            </Link>
+        {/* Desktop Call Button */}
+        <Button asChild className="hidden md:flex bg-red-600 hover:bg-red-700 text-white">
+          <Link href="tel:023579289984">
+            <Phone className="w-4 h-4 mr-2" />
+            Jetzt anrufen
+          </Link>
+        </Button>
+
+        {/* Mobile Burger */}
+        <div className="md:hidden flex items-center">
+          <Button onClick={() => setIsOpen(!isOpen)} className="bg-red-600 hover:bg-red-700 text-white">
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
         </div>
-      </header>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-zinc-900/95 backdrop-blur-sm border-t border-zinc-700">
+          <nav className="flex flex-col items-center gap-4 py-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-zinc-300 hover:text-white transition-colors text-base font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="tel:023579289984"
+              className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded mt-2"
+            >
+              <Phone className="w-4 h-4" /> Jetzt anrufen
+            </Link>
+          </nav>
+        </div>
+      )}
+    </header>
   )
 }

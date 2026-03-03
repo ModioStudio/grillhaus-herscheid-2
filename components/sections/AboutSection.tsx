@@ -38,7 +38,7 @@ export default function AboutSection() {
 
           <div className="aspect-square rounded-lg overflow-hidden">
             <img
-              src="/greek-restaurant-kitchen-grilling-meat-professiona.jpg"
+              src="/Foodtruck.jpeg"
               alt="Familiengeführte Küche mit Tradition"
               className="w-full h-full object-cover"
             />

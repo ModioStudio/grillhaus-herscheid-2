@@ -20,13 +20,7 @@ export default function Footer() {
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-linear-to-br from-red-600 to-red-700 rounded-sm flex items-center justify-center">
-                <span className="text-white font-bold text-xl">G</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold leading-none">GRILLHAUS</span>
-                <span className="text-red-600 text-xs tracking-wider">HERSCHEID</span>
-              </div>
+                <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
             </div>
 
             <p className="text-zinc-400 text-sm mb-4">
@@ -57,7 +51,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
           <div>
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <div className="space-y-2">
@@ -76,6 +69,9 @@ export default function Footer() {
               <Link href="#standort" className="block text-zinc-400 hover:text-white transition-colors text-sm">
                 Standort
               </Link>
+              <Link href="/foodtruck" className="block text-zinc-400 hover:text-white transition-colors text-sm">
+                Foodtruck
+              </Link>
             </div>
           </div>
 
@@ -84,7 +80,9 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-zinc-400">
               <div>Wiesenstraße 1</div>
               <div>58849 Herscheid</div>
-              <div>Tel: 02357 / 9289984</div>
+              <Link href="tel:023579289984" className="hover:text-white transition-colors underline">
+                Tel: 02357 / 9289984
+              </Link>
             </div>
           </div>
 

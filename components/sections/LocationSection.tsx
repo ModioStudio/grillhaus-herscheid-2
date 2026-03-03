@@ -3,6 +3,8 @@ import { openingHours } from "@/data/OpeningHours"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone } from "lucide-react"
 
+//`https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+ff0000(7.753286124495013,51.17273700460451)/7.753286124495013,51.17273700460451,15/1200x600?access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`
+
 export default function LocationSection() {
   return (
  <section id="standort" className="py-20 bg-neutral-900/60">
@@ -92,9 +94,9 @@ export default function LocationSection() {
 
             <div className="aspect-square md:aspect-auto rounded-lg overflow-hidden bg-zinc-900">
               <img
-                src={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+ff0000(7.753286124495013,51.17273700460451)/7.753286124495013,51.17273700460451,15/1200x600?access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`}
+                src="/aussen-ansicht.jpeg"
                 alt="Standort Karte"
-                className="w-full h-full object-cover filter grayscale contrast-100"
+                className="w-full h-full object-cover contrast-100"
               />
             </div>
           </div>
