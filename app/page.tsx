@@ -8,6 +8,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import LocationSection from "@/components/sections/LocationSection";
 import RestaurantGuruSection from "@/components/sections/RestaurantGuru";
 import CommunitySection from "@/components/sections/CommunitySection";
+import TerraceSection from "@/components/sections/TerraceSection";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
         <RestaurantGuruSection />
         <AboutSection />
         <CommunitySection />
+        <TerraceSection />
         <LocationSection />
       </main>
       <Footer />
