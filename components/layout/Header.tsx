@@ -40,7 +40,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop Call Button */}
         <Button
           asChild
           className="hidden md:flex bg-red-600 hover:bg-red-700 text-white"
@@ -51,7 +50,7 @@ export default function Header() {
           </Link>
         </Button>
 
-        {/* Mobile Burger */}
+
         <div className="md:hidden flex items-center">
           <Button
             onClick={() => setIsOpen(!isOpen)}
@@ -62,7 +61,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-zinc-900/95 backdrop-blur-sm border-t border-zinc-700">
           <nav className="flex flex-col items-center gap-4 py-4">

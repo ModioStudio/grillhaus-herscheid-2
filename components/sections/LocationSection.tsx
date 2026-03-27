@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { openingHours } from "@/data/OpeningHours";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function LocationSection() {
   const longitude = 7.753286124495013;
@@ -82,9 +83,14 @@ export default function LocationSection() {
             </div>
 
             <div className="flex gap-3 mt-8">
-              <Button className="flex-1 bg-red-600 hover:bg-red-700 text-white cursor-pointer">
-                <Phone className="w-4 h-4 mr-2" />
-                Anrufen
+              <Button
+                asChild
+                className="flex-1 bg-red-600 hover:bg-red-700 text-white cursor-pointer"
+              >
+                <Link href="tel:023579289984">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Jetzt anrufen
+                </Link>
               </Button>
               <Button
                 asChild
