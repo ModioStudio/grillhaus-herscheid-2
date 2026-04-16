@@ -1,11 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showMobileHeader, setShowMobileHeader] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const shouldShow = window.scrollY > 24;
+      setShowMobileHeader(shouldShow);
+
+      if (!shouldShow) {
+        setIsOpen(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { href: "#start", label: "Start" },
@@ -17,7 +33,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-zinc-900/60 backdrop-blur-sm border-b border-zinc-700">
+    <header
+      className={`fixed top-0 w-full z-50 bg-zinc-900/60 backdrop-blur-sm border-b border-zinc-700 transition-transform duration-300 md:translate-y-0 ${
+        showMobileHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center">
           <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
@@ -49,7 +69,6 @@ export default function Header() {
             Jetzt anrufen
           </Link>
         </Button>
-
 
         <div className="md:hidden flex items-center">
           <Button
