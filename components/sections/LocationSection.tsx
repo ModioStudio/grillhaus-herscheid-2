@@ -5,13 +5,6 @@ import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function LocationSection() {
-  const longitude = 7.753286124495013;
-  const latitude = 51.17273700460451;
-  const mapboxToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-  const mapboxStaticMapUrl = mapboxToken
-    ? `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+dc2626(${longitude},${latitude})/${longitude},${latitude},15,0/1200x1200?access_token=${mapboxToken}`
-    : "/aussen-ansicht.jpeg";
-
   return (
     <section id="standort" className="py-20 bg-neutral-900/60">
       <div className="container mx-auto px-4">
@@ -112,7 +105,7 @@ export default function LocationSection() {
 
           <div className="aspect-square md:aspect-auto rounded-lg overflow-hidden bg-zinc-900 border border-zinc-800 relative">
             <img
-              src={mapboxStaticMapUrl}
+              src="/location.png"
               alt="Karte zum Standort in der Wiesenstraße 1, 58849 Herscheid"
               className="w-full h-full object-cover contrast-100"
             />
