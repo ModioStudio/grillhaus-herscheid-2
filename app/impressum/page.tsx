@@ -41,7 +41,7 @@ export default function ImpressumPage() {
         </section>
 
         <section className="space-y-3 rounded-xl border border-black/10 bg-white p-6">
-          <h2 className="text-lg font-semibold">Umsatzsteuer</h2>
+          <h2 className="text-lg font-semibold">Umsatzsteuer-ID</h2>
           <p className="leading-relaxed text-black/85">
             USt-IdNr.: nicht vorhanden / ggf. ergänzen
           </p>
@@ -53,6 +53,46 @@ export default function ImpressumPage() {
           </h2>
           <p className="leading-relaxed text-black/85">
             Inhaber gemäß oben genannten Angaben
+          </p>
+        </section>
+
+        <section className="space-y-3 rounded-xl border border-black/10 bg-white p-6">
+          <h2 className="text-lg font-semibold">Technische Dienstleister</h2>
+          <p className="leading-relaxed text-black/85">
+            Diese Website wird ueber externe technische Dienstleister betrieben.
+            Dazu kann insbesondere Cloudflare, Inc., 101 Townsend St, San
+            Francisco, CA 94107, USA, als CDN- und Sicherheitsanbieter gehoeren.
+          </p>
+          <p className="leading-relaxed text-black/85">
+            Details zur Datenverarbeitung durch Cloudflare finden Sie in der
+            Datenschutzerklaerung.
+          </p>
+        </section>
+
+        <section className="space-y-3 rounded-xl border border-black/10 bg-white p-6">
+          <h2 className="text-lg font-semibold">EU-Streitschlichtung</h2>
+          <p className="leading-relaxed text-black/85">
+            Die Europaeische Kommission stellt eine Plattform zur
+            Online-Streitbeilegung (OS) bereit:
+            https://ec.europa.eu/consumers/odr/
+          </p>
+        </section>
+
+        <section className="space-y-3 rounded-xl border border-black/10 bg-white p-6">
+          <h2 className="text-lg font-semibold">
+            Verbraucherstreitbeilegung/Universalschlichtungsstelle
+          </h2>
+          <p className="leading-relaxed text-black/85">
+            Wir sind nicht verpflichtet und nicht bereit, an
+            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+            teilzunehmen.
+            <p>
+              Quelle:
+              <a className="text-blue-400" href="https://www.e-recht24.de">
+                {" "}
+                https://www.e-recht24.de
+              </a>
+            </p>
           </p>
         </section>
 
