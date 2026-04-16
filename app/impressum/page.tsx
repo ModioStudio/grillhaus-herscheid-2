@@ -80,19 +80,16 @@ export default function ImpressumPage() {
 
         <section className="space-y-3 rounded-xl border border-black/10 bg-white p-6">
           <h2 className="text-lg font-semibold">
-            Verbraucherstreitbeilegung/Universalschlichtungsstelle
+            Verbraucherstreitbeilegung <br /> Universalschlichtungsstelle
           </h2>
           <p className="leading-relaxed text-black/85">
             Wir sind nicht verpflichtet und nicht bereit, an
             Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-            teilzunehmen.
-            <p>
-              Quelle:
-              <a className="text-blue-400" href="https://www.e-recht24.de">
-                {" "}
-                https://www.e-recht24.de
-              </a>
-            </p>
+            teilzunehmen. Quelle:
+            <a className="text-blue-400" href="https://www.e-recht24.de">
+              {" "}
+              https://www.e-recht24.de
+            </a>
           </p>
         </section>
 
