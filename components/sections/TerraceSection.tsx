@@ -34,7 +34,7 @@ export default function TerraceSection() {
                 size="lg"
                 className="bg-red-600 hover:bg-red-700 text-white px-8"
               >
-                <a href="#standort">Terrasse besuchen</a>
+                <a href="#standort">Standort ansehen</a>
               </Button>
 
               <Button
