@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
+import { Link, MapPin } from "lucide-react";
 import { Star } from "lucide-react";
 
 export default function HeroSection() {
