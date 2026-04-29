@@ -5,17 +5,18 @@ export default function CommunitySection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-1 md:order-2">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Seit 2016 mit der Gemeinschaft
+              Engagement für die Region seit 2016
             </h2>
 
-            <p className="text-lg text-zinc-300 mb-2 leading-relaxed">
+            <p className="text-lg text-zinc-300 mb-4 leading-relaxed">
               Als Sponsor lokaler Sportvereine engagieren wir uns aktiv in der
               Gemeinschaft von Herscheid und Umgebung.
             </p>
 
             <p className="text-lg text-zinc-300 leading-relaxed">
-              Ob auf dem Sportplatz oder bei lokalen Veranstaltungen. Wir sind
-              dabei und sorgen dafür, dass Ihre Gäste bestens versorgt sind.
+              Ob auf dem Sportplatz oder bei lokalen Veranstaltungen: Wir sind
+              immer dabei und sorgen dafür, dass alle Gäste bestens verpflegt
+              sind.
             </p>
           </div>
 
