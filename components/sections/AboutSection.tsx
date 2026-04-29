@@ -22,8 +22,8 @@ export default function AboutSection() {
 
             <div className="flex flex-wrap gap-8">
               <div>
-                <div className="text-4xl font-bold text-red-600 mb-2">4,8★</div>
-                <div className="text-zinc-400">Google Bewertung</div>
+                <div className="text-4xl font-bold text-red-600 mb-2">#1</div>
+                <div className="text-zinc-400">in Herscheid</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-red-600 mb-2">500+</div>
