@@ -26,7 +26,7 @@ export default function ImpressumPage() {
         <section className="space-y-3 rounded-xl border border-black/10 bg-white p-6">
           <h2 className="text-lg font-semibold">Vertreten durch</h2>
           <p className="leading-relaxed text-black/85">
-            Inhaber: Georgio Gabrelas
+            Inhaber: Georgios Gabrelas
           </p>
         </section>
 
